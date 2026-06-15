@@ -17,7 +17,7 @@ const data = {
 app.get('/', (req, res) => {
     res.send("We are running")
 })
-app.city('/city', (req, res)=>{
+app.get('/city', (req, res)=>{
     res.json(data)
 })
 
