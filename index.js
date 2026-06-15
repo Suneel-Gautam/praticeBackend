@@ -1,10 +1,24 @@
 const express = require('express')
 require('dotenv').config()
 const app = express()
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
+
+
+const data = {
+    "cities": [
+        "Kathmandu",
+        "Pokhara",
+        "Lalitpur",
+        "Bhaktapur",
+        "Biratnagar"
+    ]
+}
 
 app.get('/', (req, res) => {
     res.send("We are running")
+})
+app.city('/city', (req, res)=>{
+    res.json(data)
 })
 
 app.listen(port, () => {
